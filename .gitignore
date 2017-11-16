@@ -1,0 +1,4 @@
+.build
+DerivedData
+llbuild-sample.xcodeproj/xcuserdata/
+llbuild-sample.xcodeproj/project.xcworkspace/xcuserdata/

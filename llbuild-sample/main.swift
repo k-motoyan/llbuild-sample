@@ -8,5 +8,13 @@
 
 import Foundation
 
-print("Hello, World!")
+typealias Compute = () -> Void
+
+enum BuildKey: String { case initialize, compile, run }
+
+let delegate = MyBuildEngineDelegate()
+let engine = BuildEngine(delegate: delegate)
+
+let key = Key(BuildKey.run.rawValue)
+_ = engine.build(key: key)
 
