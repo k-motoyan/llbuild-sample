@@ -10,11 +10,11 @@ import Foundation
 
 typealias Compute = () -> Void
 
-enum BuildKey: String { case initialize, compile, run }
+enum BuildKey: String { case initialize, compile }
 
 let delegate = MyBuildEngineDelegate()
 let engine = BuildEngine(delegate: delegate)
 
-let key = Key(BuildKey.run.rawValue)
+let key = Key(BuildKey.compile.rawValue)
 _ = engine.build(key: key)
 

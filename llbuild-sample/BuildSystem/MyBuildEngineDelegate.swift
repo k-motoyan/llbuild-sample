@@ -53,17 +53,6 @@ final class MyBuildEngineDelegate: BuildEngineDelegate {
                 self.exec(cmd: self.compileCmd, args: args)
             }
 
-        case BuildKey.run.rawValue:
-            let inputs = [
-                Key(BuildKey.initialize.rawValue),
-                Key(BuildKey.compile.rawValue)
-            ]
-
-            return MyRule(inputs) {
-                let output = self.exec(cmd: "\(self.buildDir)/sample", args: [])
-                print(output)
-            }
-
         default:
             fatalError("unexpected key.")
 
